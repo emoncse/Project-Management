@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}User List{% endblock %}
+{% block content %}
+<div class="card mt-4">
+    <div class="card-header">User List</div>
+    <div class="card-body">
+        <ul class="list-group">
+            {% for user in users %}
+                <li class="list-group-item">{{ user.username }} - {{ user.email }}</li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'create_user' %}" class="btn btn-primary mt-3">Create User</a>
+    </div>
+</div>
+{% endblock %}

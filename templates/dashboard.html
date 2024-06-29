@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<div class="card mt-4">
+    <div class="card-header">Dashboard</div>
+    <div class="card-body">
+        <h1>Projects</h1>
+        <ul class="list-group">
+            {% for project in projects %}
+                <li class="list-group-item">
+                    <a href="{% url 'project_detail' project.pk %}">{{ project.name }}</a> - Progress: {{ project.progress }}%
+                </li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'create_project' %}" class="btn btn-primary mt-3">Create Project</a>
+    </div>
+</div>
+{% endblock %}

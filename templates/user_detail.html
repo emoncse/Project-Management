@@ -1,0 +1,19 @@
+{% extends "base_manage.html" %}
+{% block head_title %}
+    {{ user.username }} - Profile
+{% endblock head_title %}
+{% block content %}
+<div class="card mt-4 mx-auto" style="max-width: 500px;">
+    <div class="card-header bg-primary text-white text-center">
+        <h2>{{ user.username }}</h2>
+    </div>
+    <div class="card-body">
+        <p><strong>Email:</strong> {{ user.email }}</p>
+        <p><strong>First Name:</strong> {{ user.first_name }}</p>
+        <p><strong>Last Name:</strong> {{ user.last_name }}</p>
+        <p><strong>Date Joined:</strong> {{ user.date_joined }}</p>
+        <p><strong>Last Login:</strong> {{ user.last_login }}</p>
+        <a href="{% url 'user_list' %}" class="btn btn-secondary mt-3">Back to User List</a>
+    </div>
+</div>
+{% endblock content %}
