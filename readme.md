@@ -107,6 +107,11 @@ This project is a comprehensive Project Management System built with Django. It 
 
 ## For Login with Github
 - Create a Github OAuth App
-- Add the Client ID and Client Secret to the 
+- Add the Client ID and Client Secret to the admin panel under the `Social Applications` section.
+- Add the redirect URL to the Github OAuth App settings.
+- Also can be added to the setting file and env file based on environment setting.
+- After adding the Client ID and Client Secret, the user can log in with Github.
+- The user will be redirected to the Github login page and then back to the application.
+- The github login is partially implemented. The user can log in with Github but the user data is not saved in the database.
 
 ### Thank you.
